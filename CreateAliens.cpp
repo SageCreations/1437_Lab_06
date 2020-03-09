@@ -5,15 +5,19 @@
  * 
 */
 
+#include "AlienType.hpp"
 #include "JupiterianType.cpp"
 #include "MartianType.cpp"
 
 int main() {
-    MartianType martian();
-    JuperiterianType Juperiterian();
+    MartianType martian = MartianType(4, 3, 9);
+    JuperiterianType Juperiterian = JuperiterianType(11, 6, 4);
 
-    martian.description();
-    Juperiterian.description();
+    martian.displayAlien();
+    martian.display();
+
+    Juperiterian.displayAlien();
+    Juperiterian.display();
     
     return 0;
 }

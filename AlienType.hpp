@@ -9,7 +9,6 @@
 #define ALIENTYPE_HPP
 
 #include <iostream>
-#include <string>
 
 class AlienType
 {
@@ -19,7 +18,12 @@ class AlienType
         int legs;
     public:
         //output method
-        std::string description();
+        void display() {
+            //std::cout << "\033[2J" << std::endl;
+            std::cout << "I have " << eyes << " eyes";
+            std::cout << ", " << arms << " arms and ";
+            std::cout << legs << " legs.\n\n\n";
+        }
 };
 
 

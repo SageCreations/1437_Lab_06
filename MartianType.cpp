@@ -7,12 +7,11 @@
 
 #include "AlienType.hpp"
 
-class MartianType: private AlienType{
+class MartianType: public AlienType{
     public:
         MartianType();
-        
-        std::string AlienType::description();
-    
+        MartianType(int, int, int);
+        void displayAlien();
 };
 
 MartianType::MartianType() {
@@ -21,10 +20,14 @@ MartianType::MartianType() {
     legs = 2;
 }
 
-std::string MartianType::description() {
-    std::cout << "\033[2J" << std::endl;
-    std::cout << "I have " << eyes << " eyes";
-    std::cout << ", " << arms << " arms and ";
-    std::cout << legs << " legs.";
+MartianType::MartianType(int e, int a, int l) {
+    eyes = e;
+    arms = a;
+    legs = l;
 }
+
+void MartianType::displayAlien() {
+    std::cout << "I am a Martian and ";
+}
+
 

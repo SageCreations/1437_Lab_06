@@ -7,10 +7,11 @@
 
 #include "AlienType.hpp"
 
-class JuperiterianType: private AlienType {
+class JuperiterianType: public AlienType {
     public: 
         JuperiterianType();
-        std::string description();
+        JuperiterianType(int, int, int);
+        void displayAlien();
 };
 
 JuperiterianType::JuperiterianType() {
@@ -19,11 +20,16 @@ JuperiterianType::JuperiterianType() {
     legs = 2;
 }
 
-std::string JuperiterianType::description() {
-    std::cout << "\033[2J" << std::endl;
-    std::cout << "I have " << eyes << " eyes";
-    std::cout << ", " << arms << " arms and ";
-    std::cout << legs << " legs.";
+JuperiterianType::JuperiterianType(int e, int a, int l) {
+    eyes = e;
+    arms = a;
+    legs = l;
 }
+
+void JuperiterianType::displayAlien() {
+    std::cout << "I am a Juperiterian and ";
+}
+
+
 
 
